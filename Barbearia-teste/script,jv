@@ -1,0 +1,13 @@
+
+const botao = document.getElementById("agendar");
+
+// Número fictício: substitua pelo WhatsApp real do negócio.
+const telefone = "5541999999999";
+
+botao.addEventListener("click", () => {
+  const mensagem = "Olá! Gostaria de agendar um horário na Barbearia Elite.";
+
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank", "noopener,noreferrer");
+});
